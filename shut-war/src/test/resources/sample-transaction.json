@@ -1,0 +1,61 @@
+{
+  "transactions" : [
+    {
+      "name" : "Recherche_PartenaireRecherche_Partenaire_Rechercher_GERER_PARTENAIRE",
+      "timestampStart": "1432907923455",
+      "timestampStop": "1432907924255",
+      "totalServerRoundtripCount" : "0",
+      "serverRoundtripElements" : [
+        {
+          "timestampOverallStart" : "1432907923455",
+          "timestampOverallEnd" : "1432907923455",
+          "timestampRequestObjSerializationStart" : "1432907923455",
+          "timestampRequestObjSerializationEnd" : "1432907923455",
+          "timestampServerRoundtripStart" : "1432907923455",
+          "timestampServerRoundtripEnd" : "1432907923455",
+          "timestampResponseObjDeserializationStart" : "1432907923455",
+          "timestampResponseObjDeserializationEnd" : "1432907923455",
+          "httpMethodName" : "findDossierAdhesionById",
+          "httpUrl" : "https://pwservices.groupemutuel.ch:40100/ContratWAR/remoting/ContratSvc",
+          "httpMethodPath" : "",
+          "httpStatusCode" : "200",
+          "httpRequestContentLength" : "401",
+          "httpResponseContentLength" : "29709",
+          "businessServiceName" : "",
+          "businessMethodName" : "",
+          "threadName" : "Worker-109-877"
+        },
+        {
+          "timestampOverallStart" : "1432907923455",
+          "timestampOverallEnd" : "1432907923455",
+          "timestampRequestObjSerializationStart" : "1432907923455",
+          "timestampRequestObjSerializationEnd" : "1432907923455",
+          "timestampServerRoundtripStart" : "1432907923455",
+          "timestampServerRoundtripEnd" : "1432907923455",
+          "timestampResponseObjDeserializationStart" : "1432907923455",
+          "timestampResponseObjDeserializationEnd" : "1432907923455",
+          "httpMethodName" : "getListIncoherenceOcrByDossier",
+          "httpUrl" : "https://pwservices.groupemutuel.ch:40100/ContratWAR/remoting/ContratSvc",
+          "httpMethodPath" : "",
+          "httpStatusCode" : "200",
+          "httpRequestContentLength" : "401",
+          "httpResponseContentLength" : "29709",
+          "businessServiceName" : "",
+          "businessMethodName" : "",
+          "threadName" : "Worker-109-877"
+        }
+      ],
+      "distributionTimeComputedClient" : "0",
+      "distributionTimeComputedServer" : "0",
+      "ddistributionTimeComputedEnduser" : "47",
+      "distributionTimeComputedServerPercent" : "0",
+      "mayContainAsyncServerRoundtrips": "false",
+      "userObjectsStart": "2274",
+      "gdiObjectsStart": "1027",
+      "memoryUsedStart": "124",
+      "userObjectsStop" : "2275",
+      "gdiObjectsStop" : "1028",
+      "memoryUsedStop" : "124"
+    }
+  ]
+}

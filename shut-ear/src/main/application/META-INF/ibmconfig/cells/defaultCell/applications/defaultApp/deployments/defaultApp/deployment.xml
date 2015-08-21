@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><appdeployment:Deployment xmlns:appdeployment="http://www.ibm.com/websphere/appserver/schemas/5.0/appdeployment.xmi" xmlns:xmi="http://www.omg.org/XMI" xmi:id="Deployment_shut-ear" xmi:version="2.0">
+  <deployedObject autoLink="true" startingWeight="10" warClassLoaderPolicy="SINGLE" xmi:id="ApplicationDeployment_shut-ear" xmi:type="appdeployment:ApplicationDeployment">
+    <classloader mode="PARENT_FIRST" xmi:id="Classloader_shut-ear">
+      <!-- library ref like %lt;libraries xmi:id="LibraryRef_" libraryName="HIBERNATE-core3.0"/&gt; -->
+    <libraries libraryName="core-3.1" xmi:id="LibraryRef_core-3.1"/>
+</classloader>
+  </deployedObject>
+</appdeployment:Deployment>
