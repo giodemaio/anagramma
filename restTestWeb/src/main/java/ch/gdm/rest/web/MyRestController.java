@@ -46,5 +46,11 @@ public class MyRestController {
 
 		return myRestService.calculePow(pow2InputDto);
 	}
+	@RequestMapping(value = "/anagram", method = RequestMethod.POST)
+	@ResponseBody
+	public AnagramDto anagram(@RequestBody AnagramDto pow2InputDto) {
+
+		return myRestService.anagram(pow2InputDto);
+	}
 
 }

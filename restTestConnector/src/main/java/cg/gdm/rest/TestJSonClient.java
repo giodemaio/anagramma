@@ -23,18 +23,34 @@ public class TestJSonClient {
 
 	public static void main(String[] args) throws RestClientException,
 			URISyntaxException {
-		testPow();
+		testAnagram();
+	}
+
+	private static void testAnagram() throws URISyntaxException {
+		AnagramDto dto = new AnagramDto();
+		dto.setWord("saca");
+		HttpEntity<AnagramDto> httpEntity = new HttpEntity<>(dto);
+		TestJSonClient client = new TestJSonClient();
+		ResponseEntity<? extends AnagramDto> future = client
+				.anagram(httpEntity);
+		if (future.getBody().getResult() != null) {
+			for (String word : future.getBody().getResult()) {
+				System.out.println(word);
+			}
+		}else{
+			System.out.println("Pas de resultat");
+		}
+
 	}
 
 	private static void testPow() throws URISyntaxException {
-Pow2InputDto dto=new Pow2InputDto(BigDecimal.TEN,3);
-HttpEntity<Pow2InputDto> httpEntity = new HttpEntity<>(dto);
-TestJSonClient client = new TestJSonClient();
-ResponseEntity<? extends Pow2InputDto> future = client.calculePow(httpEntity);
+		Pow2InputDto dto = new Pow2InputDto(BigDecimal.TEN, 3);
+		HttpEntity<Pow2InputDto> httpEntity = new HttpEntity<>(dto);
+		TestJSonClient client = new TestJSonClient();
+		ResponseEntity<? extends Pow2InputDto> future = client
+				.calculePow(httpEntity);
 
-System.out.println(future.getBody().getResult().toPlainString());
-
-
+		System.out.println(future.getBody().getResult().toPlainString());
 
 	}
 
@@ -86,10 +102,21 @@ System.out.println(future.getBody().getResult().toPlainString());
 						Pow2InputDto.class);
 		return future;
 	}
+
+	private ResponseEntity<? extends AnagramDto> anagram(
+			HttpEntity<AnagramDto> powInputDto) throws URISyntaxException {
+
+		ResponseEntity<? extends AnagramDto> future = getRestTemplate()
+				.postForEntity(getServiceEndpoint("anagram"), powInputDto,
+						AnagramDto.class);
+		return future;
+	}
+
 	private static URI getShutStatisticsServiceEndpoint()
 			throws URISyntaxException {
 		return new URI(SERVER_URL + "testViewInput");
 	}
+
 	private static URI getServiceEndpoint(String serviceUrl)
 			throws URISyntaxException {
 		return new URI(SERVER_URL + serviceUrl);
